@@ -1,0 +1,133 @@
+body 
+{ 
+	margin: 0px 0px 0px 0px; 
+	font-family: sans-serif;
+	font-size:8pt;
+}
+
+h2
+{
+	font-size:10pt;
+	font-weight:bold;
+}
+
+h3
+{
+	font-size:8pt;
+	font-weight:bold;
+}
+
+p
+{
+	font-size:8pt;
+}
+li
+{
+	font-size:8pt;
+	padding:0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+#canvas
+{
+	width:100%;
+	height:100%;
+	table-layout:fixed;
+}
+
+
+#headerrow
+{
+	height:189px;
+	background-image: url(headerbg.png);
+	background-repeat:repeat-x;
+	vertical-align:text-top;
+}
+#header
+{
+	position: relative;
+	padding: 0 0 0 0;
+	margin: 0 auto 0 auto;
+	width:800px;
+	height:100px;
+}
+#menu
+{
+	width:100%;
+}
+#title
+{
+	position: relative;
+	padding: 10 0 0 0;
+	margin: 0 auto 0 auto;
+	width:800px;
+	font-weight:bold;
+	font-size:16pt;
+}
+
+
+#content
+{
+	position: relative;
+	padding: 0 0 0 0;
+	margin: 0 auto 0 auto;
+	width:800px;
+	height:100%;
+	vertical-align:text-top;
+}
+#leftcolumn
+{
+	width:70%;
+	float:left;
+}
+#rightcolumn
+{
+	padding: 0 0 0 5px;
+	border-left: 1px solid gray;
+	width:29%;
+	float:right;
+	height:100%;
+}
+
+.halfcolumn
+{
+	width:49%;
+	float:left;
+}
+
+#footerrow
+{
+	height:45px;
+	background-image: url(footerbg.png);
+	background-repeat:repeat-x;
+}
+#footer
+{
+	text-align:center;
+	position: relative;
+	padding: 0 0 0 0;
+	margin: 0 auto 0 auto;
+	width:800px;
+	color:gray;
+	font-size:10pt;
+}
+#footer a
+{
+	color:gray;
+	text-decoration: none;
+}
+
+
+/* comment call out */
+.commentcallout
+{
+	font-size:10pt;
+	background-image:url(commentcalloutbg.png);
+	width:219px;
+	height:127px;
+}
+.commentcallout p
+{
+	font-size:10pt;
+	padding: 10 10 10 10;
+}

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AmakoziSite", ".", "{7F7E4A37-0BE8-47D7-A2AB-8115D3E8F618}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.PhysicalPath = "..\AmakoziSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AmakoziSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.VirtualPath = "/AmakoziSite"
+		Release.AspNetCompiler.Debug = "False"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.PhysicalPath = "..\AmakoziSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AmakoziSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.VirtualPath = "/AmakoziSite"
+		SccAuxPath = "Svn"
+		SccLocalPath = "Svn"
+		SccProjectName = "Svn"
+		SccProvider = "SubversionScc"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		VWDDynamicPort = "false"
+		VWDPort = "8282"
+		VWDVirtualPath = "/"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+		Svn-Managed = True
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F7E4A37-0BE8-47D7-A2AB-8115D3E8F618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7E4A37-0BE8-47D7-A2AB-8115D3E8F618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

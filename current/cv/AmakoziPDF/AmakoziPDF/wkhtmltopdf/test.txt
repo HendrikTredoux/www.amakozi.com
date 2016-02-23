@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head runat="server">
+ 
+    <title>UMass Lowell Academic Catalog</title>
+
+
+ </head>
+ 
+<body style="border:0; margin: 0;" onload="subst()">
+ 
+    <form id="form1" runat="server">
+    <img style="padding-bottom:20px;" src="/system/includes/svg/pdf_header.svg" width="50%" type="image/svg+xml"/>
+    <div id="pageData">
+ 
+        
+ 
+        <!--replaceWithComponentData--> <!--DO NOT DELETE THIS COMMENT!-->
+ 
+    </div>
+ 
+
+ 
+    </form>
+ 
+</body>
+ 
+</html>
+ 

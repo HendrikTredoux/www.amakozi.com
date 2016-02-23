@@ -1,0 +1,5 @@
+C:\Amakozi Development\Amakozi Internal Projects\AmakoziPDF\AmakoziPDF\AmakoziPDF\bin\AmakoziPDF.dll
+C:\Amakozi Development\Amakozi Internal Projects\AmakoziPDF\AmakoziPDF\AmakoziPDF\bin\AmakoziPDF.pdb
+C:\Amakozi Development\Amakozi Internal Projects\AmakoziPDF\AmakoziPDF\AmakoziPDF\obj\Debug\ResolveAssemblyReference.cache
+C:\Amakozi Development\Amakozi Internal Projects\AmakoziPDF\AmakoziPDF\AmakoziPDF\obj\Debug\AmakoziPDF.dll
+C:\Amakozi Development\Amakozi Internal Projects\AmakoziPDF\AmakoziPDF\AmakoziPDF\obj\Debug\AmakoziPDF.pdb

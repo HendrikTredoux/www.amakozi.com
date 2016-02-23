@@ -1,0 +1,325 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+    Course Listings
+</title>
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/reset.css" />
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/globalnav.css" />
+    <link rel="Stylesheet" href="system/includes/css/jquery-ui.css" type="text/css" />
+    <script type="text/javascript" src="system/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="system/includes/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="system/includes/js/uml.js"></script>
+    <script type="text/javascript" src="system/includes/js/features.js"></script>
+    
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/template-shell.css" />
+    <!--[if lte IE 7]>
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/globalnav-ie.css" />
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/template-shell-ie.css" />
+    <![endif]-->
+    
+    
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/catalog-inside.css" />
+    <!--[if lte IE 7]>
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/catalog-inside-ie.css" />
+    <![endif]-->
+    <link rel="Stylesheet" href="system/includes/css/ui.selectmenu.css" type="text/css" />
+    <script type="text/javascript" src="system/includes/js/ui.selectmenu.js"></script>
+
+
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/dynamicnews.css" />
+    <link type="text/css" rel="Stylesheet" href="system/includes/css/footer.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="system/includes/css/print.css" />
+    <script type="text/javascript" src="system/includes/js/jquery.curvycorners.source.js" ></script>
+
+    <!--For Testing Only! Remove for production. This converts all images into relative paths for portability -->
+    <script type="text/javascript" src="system/includes/js/absolute-relative.js"></script>
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+        $(document).ready(function () {
+
+            //Select styling for quicklinks - should be on every page with quick links
+            $('#quickLinks select').selectmenu({ style: 'dropdown' });
+            //Search label hiding - should be on every page with quick links
+            if ($("#newsSearchBox").val() == "") {
+                $("#newsSearchBox").val("Search Catalog");
+            }
+
+            $("#newsSearchBox").focus(function (e) {
+                if ($("#newsSearchBox").val() == "Search Catalog") {
+                    $("#newsSearchBox").val("");
+                }
+            });
+
+            $("#newsSearchBox").blur(function (e) {
+                if ($("#newsSearchBox").val() == "") {
+                    $("#newsSearchBox").val("Search Catalog");
+                }
+            });
+            
+
+
+
+            // Script for opening/closing descriptions. Buttons are added with js
+            $(".course").each(function(index, element){
+                if(index == 0){
+                    $('<div class="descriptionToggleAll">Course Descriptions: <div class="button up">Open All &#9660;</div><div class="button down">Close All &#9650;</div></div>').insertBefore(this);
+                }
+                $(this).addClass("closed");
+                $(this).append('<div class="descriptionToggle"><div class="button up">&#9660;</div><div class="button down">&#9650;</div></div>');
+            });
+
+            $(".descriptionToggle").click(descriptionToggleClick);
+            $(".descriptionToggleAll .up").click(descriptionToggleAllOpen);
+            $(".descriptionToggleAll .down").click(descriptionToggleAllClosed);
+
+            function descriptionToggleClick(e){
+                if($(e.currentTarget).parent().hasClass("closed") == true){
+                    $(e.currentTarget).parent().removeClass("closed");
+                }else{
+                    $(e.currentTarget).parent().addClass("closed");
+                }
+            }
+            function descriptionToggleAllOpen(e){
+                $(".course").each(function(index, element){
+                    if($(this).hasClass("closed") == true){
+                        $(this).removeClass("closed");
+                    }
+                });
+            }
+            function descriptionToggleAllClosed(e){
+                $(".course").each(function(index, element){
+                    if($(this).hasClass("closed") == false){
+                        $(this).addClass("closed");
+                    }
+                });
+            }
+
+
+ 
+        });
+
+    //]]>
+    </script>          
+    </head>
+    <body>
+
+    
+   
+
+   
+
+
+<!-- GLOBAL NAV BEGIN -->
+<form id="globalSearch" name="globalSearch"  action="/search.aspx" onsubmit="return globalNavSearchSubmit()" onkeypress="globalNavSearchKeypress(event)">
+<div id="gn">
+<div id="gnTop">
+        <div class="content">
+
+
+<ul class="nav"><li><a href="/default.aspx"  title="" class="" ><span>Home</span></a></li><li><a href="/Directory/default.aspx"  title="" class="" ><span>Directory</span></a></li><li><a href="http://www.uml.edu/calendar/" title="" class=""><span>Calendar</span></a></li><li><a href="http://libweb.uml.edu/" title="" class=""><span>Libraries</span></a></li><li><a href="/About/office-services.aspx"  title="" class="" ><span>Offices/Services</span></a></li><li><a href="http://www.uml.edu/maps/" title="" class=""><span>Maps/Directions</span></a></li><li><a href="http://www.uml.edu/events/" title="" class=""><span>Plan an Event</span></a></li><li><a href="http://www.uml.edu/hr/jobpostings/index.html" title="" class=""><span>Jobs</span></a></li></ul>
+
+
+
+            <div id="gn_emailButton" class="button"><a href="/student-Life/email.aspx">Email</a></div>
+            <div id="gn_isisButton" class="button"><a href="http://www.uml.edu/enrollment/isis/default.aspx">iSiS Login</a></div>
+        </div>
+    </div>
+    <div id="gnBottom">
+        <div class="content">
+            <a href="/default.aspx"><img id="gnLogo" src="system/includes/images/logo.png" alt="UMass Lowell Logo" /></a>
+
+
+
+
+<ul class="nav"><li><a href="/Admissions-Aid/default.aspx"  title="" class="" ><span>Prospective Students </span></a></li><li><a href="/Student-Life/default.aspx"  title="" class="" ><span>Current Students </span></a></li><li><a href="/Faculty-Staff/default.aspx"  title="" class="" ><span>Faculty/Staff </span></a></li><li><a href="http://www.alumniconnections.com/olc/pub/UMCL/cpages/homepage/home.jsp " title="" class="" target="_blank"><span>Alumni/Friends </span></a></li><li><a href="http://www.uml.edu/community/" title="" class=""><span>Community</span></a></li><li><a href="/Pressroom/default.aspx"  title="" class="" ><span>Media</span></a></li><li><a href="http://www.uml.edu/advancement/give/default.html" title="" class=""><span>Support UML</span></a></li></ul>
+
+             <div id="gnSearchBoxContainer"><label style="text-indent: -9999px; position: absolute;" for="gnSearchBox">Search</label><input name="q" id="gnSearchBox" value="" type="text"><input type="submit" id="gnSearchButton" />
+            </div>
+</div>
+    </div>
+    <div id="gnSearchBoxBottom">
+        <div class="content">
+            <div id="gnRadios">
+                <input name="searchType" type="radio" value="website" checked="checked" id="radio1" /><label for="radio1">website</label>
+                <input name="searchType" type="radio" value="people" id="radio2" /><label for="radio2">people</label>
+            </div>
+        </div>            
+    </div>
+</div>
+</form>
+<div style="display:none;"><form id="peopleSearch" name="peopleSearch" method="post" action="/directory/people.aspx"><input type="hidden" name="q" value=""></form></div>
+<div style="display:none;"><form id="webSearch" name="webSearch" method="get" action="/search.aspx"><input type="hidden" name="q" value=""></form></div>
+<!-- GLOBAL NAV END -->   
+<form method="post" action="experts.aspx" id="theForm" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['theForm'];
+if (!theForm) {
+    theForm = document.theForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="" />
+</div>
+<div id="mainContainer">
+    
+    
+    <div id="watermark"></div>
+    <div id="topNav"><ul><li class="about"><a href="/About/default.aspx">ABOUT</a></li><li class="academics"><a href="/Academics/default.aspx">ACADEMICS</a></li><li class="research"><a href="/Research/default.aspx">RESEARCH</a></li><li class="admissions"><a href="/Admissions-Aid/default.aspx">ADMISSIONS &amp; AID</a></li><li class="studentlife"><a href="/Student-Life/default.aspx">STUDENT LIFE</a></li><li class="athletics"><a href="/Athletics-Recreation/default.aspx">ATHLETICS &amp; RECREATION</a></li></ul></div><div id="megamenu"><div id="mm_top"></div><div id="mm_body"><div id="mm_aboutColum"><ul><li><a href="/About/default.aspx">About UMass Lowell</a></li><li><a href="/Chancellor/Welcome.aspx">Chancellor's Welcome</a></li><li><a href="/About/quick-facts.aspx">Quick Facts</a></li><li><a href="/About/leadership/campus-leadership.aspx">Campus Leadership</a></li><li><a href="/About/about-lowell/default.aspx">About Lowell</a></li></ul></div><div id="mm_academicsColumn"><ul><li><a href="/Academics/provost-office/default.aspx">Office of the Provost</a></li><li><a href="/Academics/undergraduate-programs/default.aspx">Undergraduate Programs</a></li><li><a href="/Academics/Graduate-programs/default.aspx">Graduate Programs</a></li><li><a href="http://www.uml.edu/registrar/">Registrar's Office</a></li><li><a href="/Academics/colleges.aspx">Colleges &amp; Schools</a></li><li><a href="http://continuinged.uml.edu/">Online Learning</a></li><li><a href="/Experiential-Learning/default.aspx">Coop Program</a></li><li><a href="/CLASS/Tutoring/default.aspx">Tutoring</a></li><li><a href="/CLASS/Advising-Center/Advising-Center.aspx">Advising</a></li><li><a href="/Academics/Policies-Services/default.aspx">Academic Policies &amp; Services</a></li><li><a href="http://www.uml.edu/catalog/">Catalog</a></li></ul></div><div id="mm_researchColumn"><ul><li><a href="/Research/centers/default.aspx">Major Research Areas</a></li><li><a href="/Research/ORA/default.aspx">Research Administration</a></li><li><a href="/Research/OIC/default.aspx">Institutional Compliance</a></li><li><a href="/Research/cvip/default.aspx">Industry Collaboration (CVIP)</a></li><li><a href="/Research/ORA/policies.aspx">Research Policies and Guidelines</a></li></ul></div><div id="mm_admissionsColumn"><ul><li><a href="/admissions/default.aspx">Undergraduate</a></li><li><a href="/Grad/default.aspx">Graduate</a></li><li><a href="http://continuinged.uml.edu/">Continuing Education</a></li><li><a href="/admissions/information-for/transfers/default.aspx">Transfer Students</a></li><li><a href="/International-applicants/default.aspx">International Applicants</a></li><li><a href="/FinancialAid/default.aspx">Financial Aid</a></li><li><a href="/FinancialAid/scholarships/default.aspx">Scholarships/Fellowships</a></li><li><a href="http://www.uml.edu/ADMIN/AR/tuition.html">Tuition &amp; Fees</a></li><li><a href="/FinancialAid/info-for/graduate/Assistantships.aspx">Research &amp; Teaching Assistantships</a></li></ul></div><div id="mm_studentLifeColumn"><ul><li><a href="http://www-umlcal.umassadmin.net/wv331L2/wv3_servlet/urd/run/wv_event.DayList?evfilter=191808">Events Calendar</a></li><li><a href="http://www.uml.edu/student-services/reslife">Housing</a></li><li><a href="http://www.campusdish.com/en-us/CSNE/UMassLowell">Dining Services</a></li><li><a href="/About/facilities.aspx">Facilities on Campus</a></li><li><a href="http://www.uml.edu/student-services/student_activities/default.html">Student Clubs &amp; Activities</a></li><li><a href="http://www.uml.edu/student-services/">Student Services</a></li><li><a href="/Student-Life/Forms.aspx">Forms for Students</a></li><li><a href="/About/about-lowell/default.aspx">Life Outside Campus</a></li></ul></div><div id="mm_athleticsColumn"><ul><li><a href="http://www.uml.edu/campusrecreation/">Campus Recreation Center</a></li><li><a href="http://www.goriverhawks.com/">River Hawk Athletics</a></li><li><a href="http://www.goriverhawks.com/tickets/uml_student_season.html">Blue Fan Group</a></li><li><a href="http://www.goriverhawks.com/tickets/masl-tickets.html">Tickets</a></li><li><a href="http://www.uml.edu/campusrecreation/Intramurals/Intramurals.html">Intramural Sports</a></li><li><a href="http://www.uml.edu/campusrecreation/Group-Fitness/GroupFitness.html">Fitness Classes</a></li><li><a href="http://www.uml.edu/campusrecreation/Facilities/Facilities.html">Facilities</a></li></ul></div></div><div id="mm_bottom"></div></div>
+   <div id="mainBody">
+        <div id="leftColumn-shadow"></div>
+        <div id="leftColumn">
+    <div id="leftNav">
+            <div id="leftNav-row">
+        <div id="leftNav-left"></div>
+        <div id="leftNav-content">
+                                        
+    
+        <h2><a href="#">Course Listings</a></h2>                    
+        <ul>
+            <li><a href="#">Academic Catalog Home</a></li>
+            <li><a href="#">Undergradaute</a></li>
+            <li><a href="#">Graduate</a></li>
+            <li><a href="#">Continuing Education</a></li>
+            <li><a href="#">About the University</a></li>
+            <li><a href="#">Accreditation and Professional</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Academic Catalog Archives</a></li>
+        </ul>
+
+
+        </div>
+        <div id="leftNav-right"></div>
+            </div>            
+            <div id="leftNav-bottom"></div>
+    </div>                    
+    <div id="leftColumn-content">
+<div id="linkList"><ul><li>
+            <a class="CustomizeCatalog" title="Customize Your PDF Catalog" href="javascript:{openModalWindowURL('catalog-pdf.html');}"><span>Customize Your PDF Catalog</span></a>
+        </li></ul></div>
+    </div>
+        </div>
+        <div id="contentBody">
+                <div id="contentBody-center">
+                                <div id="contentBody-center-top">
+                                    <div id="topContent">
+                                                                
+            <div id="quickLinks">
+                <div class="quickHeading"><img src="/system/includes/images/catalog-heading.png" alt="Catalog"/></div>
+                <div class="yearIdentifier">2011-2012</div>
+                <div id="quickLinksOptions">
+                    <div>
+                        <select name="" onchange="" id="MainContent_PrimaryBodyContent_SidebarContent_ctl00_programselect">
+                            <option selected="selected" value="">Quick Links...</option>
+                            <option value="">How to Apply</option>
+                        </select>
+                    </div>
+                    <div id="quickLinksSearch">
+                        <div class="options">
+                            <span class="textbox"><input type="text" onkeypress="return newsSearchKeypress(event)" value="Search Catalog" class="search" id="newsSearchBox"></span>
+                            <input type="submit" onclick="return newsSearchSubmit();" value="" class="submitBtn">
+                        </div>                    
+                    </div>
+                    <p><a href="#">Advanced Search</a></p>
+                </div>                     
+            </div>
+            <h1 id="pageTitle">Course Listings</h1>
+            
+<div id="breadCrumbs">
+<a href='#'>Home</a>&nbsp;&gt;&nbsp;<a href="#" >Course Listings</a>
+</div>
+
+                
+            <div class="content">
+
+                <p>(intro) Lowell Massachusetts Velit natu roto camur obruo tation abluo dignissim, illum velit, vel, dolor aliquip. Nostrud, enim, haero et nunc mara suscipere et, vero in eu tristique bis aliquip in. Laoreet augue ad premo vereor duis eu ingenium hos quia esse, pecus probo. Occuro lobortis esca et meus autem nostrud tation typicus paratus. Ut velit, ut, nisl refero letatio. Nullus melior, exputo adsum lobortis wisi, ea metuo pecus probo.</p>
+                
+                <div class="course ">
+                    <h2><a href="#">49.201 Economics I (Microeconomics)</a> Credits:3</h2>
+                    <div class="description">
+                        <p>Ut sodales cursus accumsan. Vivamus quis erat eu tortor hendrerit hendrerit vitae vitae magna. Pellentesque sit amet tortor sit amet nulla vestibulum ullamcorper. Mauris luctus purus ut erat facilisis ut bibendum orci rutrum. Aenean interdum interdum mi, in placerat lectus eleifend eget. Curabitur dapibus eleifend venenatis.</p>
+                    </div>
+                </div>
+
+                <div class="course">
+                    <h2><a href="#">49.201 Economics I (Microeconomics)</a> Credits:3</h2>
+                    <div class="description">
+                        <p>Ut sodales cursus accumsan. Vivamus quis erat eu tortor hendrerit hendrerit vitae vitae magna. Pellentesque sit amet tortor sit amet nulla vestibulum ullamcorper. Mauris luctus purus ut erat facilisis ut bibendum orci rutrum. Aenean interdum interdum mi, in placerat lectus eleifend eget. Curabitur dapibus eleifend venenatis.</p>
+                    </div>
+                </div>
+
+                <div class="course">
+                    <h2><a href="#">49.201 Economics I (Microeconomics)</a> Credits:3</h2>
+                    <div class="description">
+                        <p>Ut sodales cursus accumsan. Vivamus quis erat eu tortor hendrerit hendrerit vitae vitae magna. Pellentesque sit amet tortor sit amet nulla vestibulum ullamcorper. Mauris luctus purus ut erat facilisis ut bibendum orci rutrum. Aenean interdum interdum mi, in placerat lectus eleifend eget. Curabitur dapibus eleifend venenatis.</p>
+
+                        <p>Vivamus quis erat eu tortor hendrerit hendrerit vitae vitae magna. Pellentesque sit amet tortor sit amet nulla vestibulum ullamcorper. Mauris luctus purus ut erat facilisis ut bibendum orci rutrum.</p>
+                    </div>
+                </div>
+
+                <div class="course">
+                    <h2><a href="#">49.201 Economics I (Microeconomics)</a> Credits:3</h2>
+                    <div class="description">
+                        <p>Ut sodales cursus accumsan. Vivamus quis erat eu tortor hendrerit hendrerit vitae vitae magna. Pellentesque sit amet tortor sit amet nulla vestibulum ullamcorper. Mauris luctus purus ut erat facilisis ut bibendum orci rutrum. Aenean interdum interdum mi, in placerat lectus eleifend eget. Curabitur dapibus eleifend venenatis.</p>
+                    </div>
+                </div>
+         
+            </div>
+                        
+                                    </div>
+                                </div>
+                                <div id="contentBody-center-bottom">
+                                                
+                                </div>
+                </div>                
+        </div>
+        <div id="contentSidebar"><div class="wrapper"></div></div>
+        <div id="contentBody-shadow"></div>
+   </div> 
+   <div id="mainBody-bottom"></div>
+
+
+    
+    <div id="footer" style="background-image: none;">
+        
+    
+
+
+  <p style="background-image: none;">One University Avenue . Lowell, MA 01854 . 978-934-4000 - <br style="background-image: none;"><strong style="background-image: none;">Admissions</strong> - 883 Broadway Street, Dugan Hall, Lowell, MA 01854
+<br style="background-image: none;"></p>
+  <p style="background-image: none;">
+    <a target="_blank" href="http://www.umassonline.net" style="background-image: none;">UMassOnline</a> | <a target="_blank" href="http://www.umassclub.com" style="background-image: none;">UMass Club</a> | <a target="_blank" href="http://www.massachusetts.edu" style="background-image: none;">UMass System</a></p>
+
+    </div>
+<div id="newsdisplay" style="display:none;">
+<div id="container"></div>
+</div>
+<div id="newsloader" style="display:none;">
+<img src="system/includes/images/uml_logo_stacked.jpg" alt="Loading" />
+</div>
+</div>         
+</form>
+</body>
+</html>

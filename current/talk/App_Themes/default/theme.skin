@@ -1,0 +1,145 @@
+<%@ Register Namespace="mojoPortal.Web.UI" Assembly="mojoPortal.Web" TagPrefix="portal" %>
+<%@ Register Namespace="mojoPortal.Web.Controls" Assembly="mojoPortal.Web.Controls" TagPrefix="mp" %>
+
+<%--
+
+@@@IMPORTANT@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+it is better to only set css classes here in the theme
+because themes are cached and if you only use css then
+page level and user level skins will over-ride the default
+skin correctly because the css will adapt to the current mojoportal skin 
+but if you use other style properties the cached skin will be applied.
+Also using the style properties results in inline styles on
+the rendered markup which makes page size larger
+and therefore slower performance
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+--%>
+
+<mp:CornerRounderTop runat="server"
+        DoRounding="true"
+        />
+        
+     <mp:CornerRounderBottom runat="server"
+        DoRounding="true"
+        />
+		
+		<portal:mojoPanel runat="server" RenderArtisteer="true" />
+		<portal:ModuleTitleControl runat="server" RenderArtisteer="true" />
+		<portal:mojoButton runat="server" RenderArtisteer="true" CssClass="art-button" />
+		
+		<%-- this clears hard coded style from validators --%>
+		<asp:ValidationSummary runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RangeValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RequiredFieldValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RegularExpressionValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CompareValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CustomValidator runat="server" ForeColor="" CssClass="txterror" />
+
+
+		<portal:mojoTreeView runat="server" SkinID="Superfish"
+		ContainerCssClass="AspNet-Menu-Horizontal"
+		RootUlCssClass="sf-menu sf-navbar"
+		RenderLiCssClasses="true"
+		RenderAnchorCss="true"
+		LiCssClass=""
+		LiRootExpandableCssClass="sf-with-ul"
+		LiRootNonExpandableCssClass=""
+		LiNonRootExpnadableCssClass=""
+		LiSelectedCssClass="current"
+		LiChildSelectedCssClass="current"
+		LiParentSelectedCssClass=""
+		AnchorCssClass="inactive"
+		AnchorSelectedCssClass="current"
+		
+	/>
+	
+	<portal:mojoTreeView runat="server" SkinID="SuperfishVertical"
+		ContainerCssClass="AspNet-Menu-Vertical"
+		RootUlCssClass="sf-menu sf-vertical"
+		RenderLiCssClasses="true"
+		RenderAnchorCss="true"
+		LiCssClass=""
+		LiRootExpandableCssClass="sf-with-ul"
+		LiRootNonExpandableCssClass=""
+		LiNonRootExpnadableCssClass=""
+		LiSelectedCssClass="current"
+		LiChildSelectedCssClass="current"
+		LiParentSelectedCssClass=""
+		AnchorCssClass="inactive"
+		AnchorSelectedCssClass="current"
+		
+	/>
+	
+	<portal:mojoTreeView runat="server" SkinID="SiteMapPage"
+			ContainerCssClass="sitemap"
+			RootUlCssClass=""
+			RenderLiCssClasses="false"
+			RenderAnchorCss="true"
+			LiCssClass=""
+			LiRootExpandableCssClass=""
+			LiRootNonExpandableCssClass=""
+			LiNonRootExpnadableCssClass=""
+			LiSelectedCssClass=""
+			LiChildSelectedCssClass=""
+			LiParentSelectedCssClass=""
+			AnchorCssClass=""
+			AnchorSelectedCssClass=""
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+			
+	<portal:mojoTreeView runat="server" SkinID="ChildSiteMap"
+			ContainerCssClass="sitemap"
+			RootUlCssClass=""
+			RenderLiCssClasses="false"
+			RenderAnchorCss="true"
+			LiCssClass=""
+			LiRootExpandableCssClass=""
+			LiRootNonExpandableCssClass=""
+			LiNonRootExpnadableCssClass=""
+			LiSelectedCssClass=""
+			LiChildSelectedCssClass=""
+			LiParentSelectedCssClass=""
+			AnchorCssClass=""
+			AnchorSelectedCssClass=""
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+   
+  
+    
+    <%--  this is the EventCalendar  --%>
+    
+     
+     <mp:DataCalendar runat="server"
+     CaptionAlign="Top"
+        DayNameFormat="Short"
+        FirstDayOfWeek="sunday"
+             NextMonthText="+"
+             NextPrevFormat="CustomText"
+            NextPrevStyle-BorderStyle="None"
+            NextPrevStyle-BorderWidth="0px"
+            DayHeaderStyle-BorderStyle="None"
+            DayHeaderStyle-BorderWidth="0px"
+            OtherMonthDayStyle-BorderWidth="0px"
+            DayStyle-BorderWidth="0px"
+            SelectorStyle-BorderWidth="0px"
+            SelectorStyle-BorderStyle="None"
+            TitleStyle-BorderWidth="0px"
+            TitleStyle-BorderStyle="None"
+           
+            PrevMonthText="-"
+            ShowDayHeader="true"
+             ShowGridLines="true"
+             ShowNextPrevMonth="true"
+             ShowTitle="true"
+             TitleFormat="MonthYear"
+   
+    /> 
+    

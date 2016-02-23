@@ -1,0 +1,47 @@
+#main
+{
+	display:inline;
+	width:650px;
+	border-right:1px solid black;
+	float:left;
+	overflow:auto;
+	margin-right:-1px;
+}
+#right
+{
+	border-left:1px solid black;
+	overflow:auto;
+}
+
+#right p
+{
+	margin-left:10px;
+}
+#right img
+{
+	margin-left:10px;
+}
+
+#right .bookmarks
+{
+	margin-left:10px;
+}
+.mediablock
+{
+	width:216px;
+	font-size:10px;
+	paddding:5px;
+	vertical-align:top;
+}
+.mediablock a
+{
+	text-decoration:none;
+	cursor:pointer;
+}
+.mediablock img
+{
+    height:120px;
+    border-style:groove;
+    border-width:1px;
+    border-color:Black;
+}

@@ -1,0 +1,18 @@
+<%@ master language="C#" autoeventwireup="true" masterpagefile="~/MasterPage.master" inherits="ThreeColumn, App_Web_mqwbca34" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadSection" runat="server">
+    <link href="/design/styles/net3col.css" rel="stylesheet" media="screen" type="text/css" />
+</asp:Content>
+<asp:Content ID="MasterMenu" runat="server" ContentPlaceHolderID="MasterMenu">
+<asp:ContentPlaceHolder ID="MainMenu" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+    <div id="left">
+        <asp:ContentPlaceHolder ID="Left" runat="server"/>
+    </div>
+    <div id="main">
+        <asp:ContentPlaceHolder ID="Content" runat="server"/>
+    </div>
+    <div id="right">
+        <asp:ContentPlaceHolder ID="Right" runat="server"/>
+    </div>
+</asp:Content>

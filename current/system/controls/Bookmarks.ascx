@@ -1,0 +1,2 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Bookmarks.ascx.cs" Inherits="system_controls_Bookmarks" %>
+<div class="bookmarks"><span class="st_twitter"></span><span class="st_facebook"></span><span class="st_email"></span><span class="st_sharethis"></span><span class="st_plusone"></span></div>

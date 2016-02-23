@@ -1,0 +1,10 @@
+<%@ master language="C#" autoeventwireup="true" masterpagefile="~/MasterPage.master" inherits="OneColumn, App_Web_mqwbca34" %>
+<asp:Content ContentPlaceHolderID="HeadSection" ID="MasterHeadSection" runat="server">
+    <asp:ContentPlaceHolder ID="HeadSection" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="MasterMenu" runat="server" ContentPlaceHolderID="MasterMenu">
+<asp:ContentPlaceHolder ID="MainMenu" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+    <asp:ContentPlaceHolder ID="Content" runat="server"/>
+</asp:Content>

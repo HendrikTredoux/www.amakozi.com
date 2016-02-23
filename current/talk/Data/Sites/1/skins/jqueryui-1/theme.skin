@@ -1,0 +1,278 @@
+<%@ Register Namespace="mojoPortal.Web.UI" Assembly="mojoPortal.Web" TagPrefix="portal" %>
+<%@ Register Namespace="mojoPortal.Web.Controls" Assembly="mojoPortal.Web.Controls" TagPrefix="mp" %>
+<%-- 
+<%@ Register Namespace="DayPilot.Web.Ui" Assembly="DayPilot" TagPrefix="dp" %>
+--%>
+
+<%--
+@@@IMPORTANT@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+it is better to only set css classes and configuration properties, but not to set style properties such as colors fonts, borders etc here.
+Doing that causes rendering of inline styles on th elements and this bulks up the markup making the page heavier.
+It is far better to only set styles from CSS
+
+http://www.mojoportal.com/understanding-the-theme-skin-file.aspx
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+--%>
+
+<%--
+	<dp:daypilotcalendar runat="server" 
+		BackColor="#FFFFD5"
+		BorderColor="#000000"
+		BorderStyle="solid"
+		BorderWidth="0px"
+		ColumnMarginRight="3"
+		CssClass="daypilot"
+		DayFontFamily="Tahoma"
+		DayFontSize="10pt"
+		EventBackColor="#FFFFFF"
+		EventBorderColor="#000000"
+		EventFontFamily="Tahoma"
+		EventFontSize="11px"
+		EventHoverColor="#DCDCDC"
+		EventLeftBarColor="Blue"
+		Font="Tahoma"
+		HeaderHeight="20"
+		HourBorderColor="#EAD098"
+		HourFontFamily="Tahoma"
+		HourFontSize="16pt"
+		HourHalfBorderColor="#F3E4B1"
+		HourHeight="40"
+		HourNameBackColor="#ECE9D8"
+		HourNameBorderColor="#ACA899"
+		HourWidth="40"
+		HoverColor="#FFED95"
+		NonBusinessBackColor="#FFF4BC"
+		ShowHeader="true"
+		ShowHours="true"
+	/>
+	--%>
+
+	<portal:mojoTreeView runat="server" SkinID="Superfish"
+		ContainerCssClass="AspNet-Menu-Horizontal"
+		RootUlCssClass="sf-menu sf-navbar"
+		RenderLiCssClasses="true"
+		RenderAnchorCss="true"
+		LiCssClass=""
+		LiRootExpandableCssClass="sf-with-ul"
+		LiRootNonExpandableCssClass=""
+		LiNonRootExpnadableCssClass=""
+		LiSelectedCssClass="current"
+		LiChildSelectedCssClass="current"
+		LiParentSelectedCssClass=""
+		AnchorCssClass="inactive"
+		AnchorSelectedCssClass="current"
+		
+	/>
+	
+	
+
+	<portal:mojoButton runat="server" UsejQueryButton="true"  />
+	
+	<portal:mojoPanel runat="server" UseJQueryUI="true"  />
+	
+<portal:ModuleTitleControl runat="server" 
+	DetectSideColumn="false"
+	Element="h2"
+	LiteralExtraTopContent="<div class='ui-widget-header ui-corner-top'>"
+	LiteralExtraBottomContent="</div>"
+	ExtraCssClasses=""
+	SideColumnExtraCssClasses=""
+	/>
+	
+<portal:HeadingControl runat="server" 
+	LiteralExtraTopContent="<div class='ui-widget-header ui-corner-top'>"
+	LiteralExtraBottomContent="</div>"
+	ExtraCssClasses="art-postheader"
+	/>
+	
+	
+	<portal:OuterWrapperPanel runat="server" 
+			Element="div"
+			ExtraCssClasses="ui-widget" 
+			RenderContentsOnly="false"
+			LiteralExtraTopContent=""
+			LiteralExtraBottomContent=""
+			DetectSideColumn="false"
+			SideColumnxtraCssClasses=""
+			SideColumnLiteralExtraTopContent=""
+			SideColumnLiteralExtraBottomContent=""
+		/>
+		
+		<portal:OuterBodyPanel runat="server" 
+			Element="div"
+			ExtraCssClasses="ui-widget-content ui-corner-bottom" 
+			RenderContentsOnly="false"
+			DetectSideColumn="false"
+			SideColumnxtraCssClasses=""
+			SideColumnLiteralExtraTopContent=""
+			SideColumnLiteralExtraBottomContent=""
+			/>
+	
+	<portal:mojoTreeView runat="server" SkinID="SiteMapPage"
+			ContainerCssClass="AspNet-TreeView"
+			RootUlCssClass=""
+			RenderLiCssClasses="true"
+			RenderAnchorCss="false"
+			LiCssClass="AspNet-TreeView-Leaf"
+			LiRootExpandableCssClass="AspNet-TreeView-Root"
+			LiRootNonExpandableCssClass="AspNet-TreeView-Root AspNet-TreeView-Leaf"
+			LiNonRootExpnadableCssClass="AspNet-TreeView-Parent"
+			LiSelectedCssClass="AspNet-TreeView-Selected"
+			LiChildSelectedCssClass="AspNet-TreeView-ChildSelected"
+			LiParentSelectedCssClass="AspNet-TreeView-ParentSelected"
+			AnchorCssClass="inactive"
+			AnchorSelectedCssClass="current"
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+		
+	<portal:mojoTreeView runat="server" SkinID="ChildSiteMap"
+			ContainerCssClass="sitemap"
+			RootUlCssClass=""
+			RenderLiCssClasses="false"
+			RenderAnchorCss="true"
+			LiCssClass=""
+			LiRootExpandableCssClass=""
+			LiRootNonExpandableCssClass=""
+			LiNonRootExpnadableCssClass=""
+			LiSelectedCssClass=""
+			LiChildSelectedCssClass=""
+			LiParentSelectedCssClass=""
+			AnchorCssClass=""
+			AnchorSelectedCssClass=""
+			ExpandDepth="-1"
+			ShowExpandCollapse="false"
+			PopulateNodesFromClient="false"
+		
+		/>
+		
+	
+	
+	
+	<asp:CreateUserWizard runat="server" 
+			CreateUserButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all" 
+			ContinueButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"  
+			FinishCompleteButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"
+			StartNextButtonStyle-CssClass="jqbutton ui-button ui-widget ui-state-default ui-corner-all"
+			/>
+	
+	
+    <asp:Panel  runat="server" SkinID="ModuleWrapper" CssClass="panelwrapper" />  
+
+     <mp:CornerRounderTop runat="server"  DoRounding="false"  />
+     <mp:CornerRounderBottom runat="server" DoRounding="false" />
+		
+		<%-- this clears hard coded style from validators --%>
+		<asp:ValidationSummary runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RangeValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RequiredFieldValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:RegularExpressionValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CompareValidator runat="server" ForeColor="" CssClass="txterror" />
+		<asp:CustomValidator runat="server" ForeColor="" CssClass="txterror" />
+
+
+       
+       <asp:CheckBoxList  runat="server"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="2"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+
+       />
+       
+       <asp:CheckBoxList  runat="server" SkinID="Roles"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="2"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+       
+       />
+       
+       <asp:CheckBoxList  runat="server" SkinID="Blog"
+       CssClass="aspcheckboxlist"
+       RepeatColumns="4"
+       RepeatDirection="horizontal"
+       RepeatLayout="Table"
+       
+       />
+   
+
+<asp:Calendar  runat="server"
+     CaptionAlign="Top"
+     CssClass="aspcalendarmain"
+     DayHeaderStyle-CssClass="aspcalendardayheader"
+     DayNameFormat="FirstLetter"
+     DayStyle-CssClass="aspcalendarday"
+     FirstDayOfWeek="sunday"
+     NextMonthText="+"
+     NextPrevFormat="CustomText"
+     NextPrevStyle-CssClass="aspcalendarnextprevious"
+     OtherMonthDayStyle-CssClass="aspcalendarothermonth"
+     PrevMonthText="-"
+     SelectedDayStyle-CssClass="aspcalendarselectedday"
+     SelectorStyle-CssClass="aspcalendarselector"
+     ShowDayHeader="true"
+     ShowGridLines="false"
+     ShowNextPrevMonth="true"
+     ShowTitle="true"
+     TitleFormat="MonthYear"
+     TitleStyle-CssClass="aspcalendartitle"
+     TodayDayStyle-CssClass="aspcalendartoday"
+     WeekendDayStyle-CssClass="aspcalendarweekendday"
+     Width="100%"
+    /> 
+
+
+    
+     <mp:DataCalendar runat="server"
+     BackColor=""
+     BorderColor=""
+     BorderStyle="none"
+     CaptionAlign="Top"
+     CssClass="mpcalendarmain"
+     DayHeaderStyle-CssClass="mpcalendardayheader"
+     DayNameFormat="Short"
+     DayStyle-CssClass="mpcalendarday"
+     FirstDayOfWeek="sunday"
+     NextMonthText="+"
+     NextPrevFormat="CustomText"
+     NextPrevStyle-CssClass="mpcalendarnextprevious"
+     OtherMonthDayStyle-CssClass="mpcalendarothermonth"
+     PrevMonthText="-"
+     SelectedDayStyle-CssClass="mpcalendarselectedday"
+     SelectorStyle-CssClass="mpcalendarselector"
+     ShowDayHeader="true"
+     ShowGridLines="false"
+     ShowNextPrevMonth="true"
+     ShowTitle="true"
+     TitleFormat="MonthYear"
+     TitleStyle-CssClass="mpcalendartitle"
+     TodayDayStyle-CssClass="mpcalendartoday"
+     WeekendDayStyle-CssClass="mpcalendarweekendday"
+   
+    /> 
+    
+   
+   
+<asp:ListBox  runat="server" SkinID="PageTree"
+         BackColor=""
+         CssClass=""
+         Font-Bold="false"
+         Font-Italic="false"
+         Font-Names=""
+         Font-Overline="false"
+         Font-Size="small"
+         Font-Strikeout="false"
+         Font-Underline="false"
+         ForeColor=""
+         Height=""
+         Width="400px"
+            
+/>          
+
+
+    

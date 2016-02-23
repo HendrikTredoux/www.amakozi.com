@@ -1,0 +1,94 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+	<meta name="description" content="Amakozi Technologies | USA / ZA" />
+	<meta name="keywords" content="amakozi,technology,technologies, sdltridion,sdl tridion consultant,consulting,consultant, tridion,sdl tridion, content management,sdl tridion 2011,tridion 2011,2011,sdl tridion 2013,tridion 2013,2013,reporting,amakazi,amakhozi,ama,amakozo,amakizi,amakos" />	
+	<meta name="norton-safeweb-site-verification" content="ovzx485i46mqecb76cr5tyfra9g9-xfblgrse-8tcxh2y71qx9jqnbwk2995s3x9cp-ofm-mcx91i8h-7jj-spws9yaelixktcy9cu45udjmow3czo3570-redm0w0e7" />	
+
+    <link href="http://www.facebook.com/Amakozi" rel="publisher" />
+
+    <asp:contentplaceholder id="HeadSection" runat="server" />
+    <link runat="server" href="~/design/styles/netmain.css" rel="stylesheet" media="screen" type="text/css" />
+    <link runat="server" href="~/design/styles/menu.css" rel="stylesheet" media="screen" type="text/css" />
+    <script type="text/javascript" src="/design/script/jquery-1.4.3.min.js"></script>
+    <!--[if lt IE 7]>
+        <script type="text/javascript" src="/design/script/unitpngfix.js"></script>
+	<![endif]-->
+    <!--[if lt IE 8]>
+        <style>
+            #loginform
+            {
+	            margin-left:-203px !important;
+            }
+        </style>
+	<![endif]-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#signin a:first-child").click(function () {
+                var logindiv = $("#loginform");
+                if($(logindiv).is(':visible'))
+                {
+                    $(logindiv).hide(500);
+                    $("#signin").removeClass("current");
+                }else{
+                    $(logindiv).show(500);
+                    $("#signin").addClass("current");
+                }
+            });
+            $(function () {
+                $.fn.YouTubePopup.defaults.draggable = true;
+                $("a.youtube").YouTubePopup({ autoplay: 0, showBorder: false });
+                $("img.youtube").YouTubePopup({ idAttribute: 'id' });
+                $("button.youtube").YouTubePopup({ idAttribute: 'id' });
+                $("a.youtubecustom").YouTubePopup({ idAttribute: 'youtube' });
+                $("a.hideTitle").YouTubePopup({ hideTitleBar: true });
+            });
+        });
+    </script>
+
+	<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'a24835f3-1389-4e91-b8bd-207d4872fded'});</script>
+	
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+    <div id="header">
+    <a href="/" title="Amakozi Technologies">
+    <div id="logo" class="unitPng">Amakozi Technologies</div>
+    </a>
+    <asp:ContentPlaceHolder ID="MasterMenu" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div id="content">
+        <asp:contentplaceholder id="Content" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </div>
+    <div id="footer">
+    <ul>
+        <!-- li><a class="first" href="#">News RSS</a></li -->
+        <li><a  class="first" href="/company/contact.aspx">Contact</a></li>
+        <li><span>Copyright © 2014 Amakozi Technologies</span></li>
+        <li><a href="/company/privacy.aspx">Privacy</a></li>
+
+    </ul>
+    </div>
+    </form>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-19316050-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+th
+{
+	width:100px;
+	background-color:#DDD
+}
+input, select, textarea
+{
+	font-size:11px;
+}
+textarea
+{
+	width:300px;
+}
+.questionlabel
+{
+	width:200px;
+}
+.bold
+{
+	font-weight:bold;
+}
+.rowon
+{
+	background-color: #e3e3e3;
+	color:Black;
+}
+.rowoff
+{
+	background-color:#efefef;
+	color:Black;
+}
+.formwrapper
+{
+	width:800px;
+}

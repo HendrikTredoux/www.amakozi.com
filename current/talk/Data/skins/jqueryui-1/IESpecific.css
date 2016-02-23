@@ -1,0 +1,48 @@
+﻿body {  }
+/*
+This file should contain SUPPLEMENTAL rules that are recognized and used only by IE.
+Similar files can be produced, as needed, for other browsers.  Whatever selectors are
+listed here should be listed in at least one other CSS file used in the current ASP.NET
+theme (thus making these supplemental).  The implementation pattern is to add new props
+to some existing rule or to override (using important) some property.
+
+*/
+
+.rightside { clear: none; }
+ul.userstats { list-style-type:none;  margin: 0px 0px 0px 0px; font-size:85%;  }
+ul.userstats ul { list-style-type:none; margin: -10px 0px 0px 0px;   }
+.mypage {margin: 0px 0px 0px 10px;  }
+.AspNet-Menu-Horizontal ul.AspNet-Menu li ul  { position:absolute; left: 0;  top: 23px; height: 23px !important; width: 75px; }
+.AspNet-Menu-Horizontal ul.AspNet-Menu li ul li ul { position:relative; left: 100%;  top: 0px; height: 23px !important; }
+ul.AspNet-Menu li a { padding: 3px 5px 3px 5px;  color: White !important;}
+ul.AspNet-Menu li li, ul.AspNet-Menu li ul li:hover { height: 23px !important; margin: 0px 0px -3px 0px;  }
+/*
+img, div, a, input { behavior: url('/ClientScript/iepngfix.htc'); }
+*/
+.uploadpanel { float:none; }
+.uploadpanel input[type="submit"] { clear: both; }
+.uploadpanel div div input[type="submit"] { clear: both; margin: 5px 15px 5px 5px;; }
+.uploadpanel div { float: left; }
+.uploadpanel div div { width:300px; clear:both;  }
+.uploadpanel div div input { margin: 4px 4px 4px 4px; clear:both;}
+.ratingStar .Filled { background-image:url('ratingStarFilledIE.png'); }
+.ratingStar .Empty { background-image:url('ratingStarEmptyIE.png'); }
+.ratingStar .Saved { background-image:url('ratingStarSavedIE.png'); }
+.qtfile, 
+.qtfile p,
+.qtfile ul,
+.qtfile li, 
+.qtfile a, 
+.qtfile span,
+.qtfile img
+{ zoom: 1; }
+/* stupid IE6 HasLayout hack */
+.cluetip-rounded #cluetip-title,
+.cluetip-rounded #cluetip-inner {
+  zoom: 1;
+}
+.postbody.NeatHtml {
+width: 99% !important;
+}
+.forumEdit, .threadEdit, .postEdit { display: inline-block; }
+ul.static, li.static { z-index:100!important; }

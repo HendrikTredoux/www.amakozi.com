@@ -1,0 +1,104 @@
+/* overrides for Artisteer you should not modify the files exported from Artisteer such as style.css, you can override things as needed here or in stylemojo.css */
+
+/* this is needed because the artisteer buttons otherwise looke enabled even when disable */
+input.art-button[disabled="disabled"] { background-color: #ccccff !important; color: #9999cc !important; }
+
+/* this keeps the background images out of the editor and dialog pages */
+body.dialogpage ,
+body.filedialog
+{
+	background-color: white;
+	background-image: none;
+	font-size: 12px; 
+}
+
+body.help-page
+{
+	color:black;
+	background-color: white;
+	background-image: none;
+	
+}
+
+body.wysiwygeditor 
+{ 
+	
+  min-width: 100px;
+  }
+  
+ .cke_panel_frame {background:white;}
+
+body.wysiwygeditor  p
+{
+  font-size: 14px;
+  margin: 12px 0;
+ 
+}
+
+body.wysiwygeditor ul li
+{
+  text-decoration: none;
+  line-height: 125%;    
+  padding: 0 0 0 13px;
+  margin-left:20px;
+  background-image: url('images/blockcontentbullets.png');
+  background-repeat: no-repeat;
+}
+
+body.wysiwygeditor  h1 { font-size:28px; }
+body.wysiwygeditor  h2 {font-size :24px;}
+body.wysiwygeditor  h3 { font-size: 22px; }
+body.wysiwygeditor  h4 { font-size: 18px; }
+body.wysiwygeditor  h5 { font-size: 16px; }
+
+body { overflow-x:hidden;  }
+
+img
+{
+  border: 0!important;
+}
+
+input, select, textarea { text-transform:none; }
+
+ul.userstats img,
+ul.linkitem  img{ margin:0; }
+
+/* this keeps side bar background images from pushing past the footer in some designs */
+.leftside , .rightside{ overflow: hidden;} 
+
+
+.art-logo h1 a { text-decoration: none;}
+
+.art-blockheader .t {max-height:40px; overflow:hidden; }
+
+.folder-panel, div.file-wraper { background-color:white; }
+ul.file-list,
+ul.file-list li ,
+ul.folder-list,
+ul.folder-list li 
+{ background-image:none; color:black; }
+
+.aspcalendarmain th, .aspcalendarmain td,
+.mpcalendarmain th, .mpcalendarmain td { text-align:center; }
+
+.eventweekview  table,
+.eventdayview  table { color:black; width:100%; }
+
+.AspNet-DataList table td,
+.eventdayview  table th,
+.eventdayview  table td,
+.eventweekview  table th,
+.eventweekview  table td
+{padding: 0px; border:none; }
+
+table.FileManager_table {  border-spacing: 0px; }
+
+.permission td,
+.permission th,
+.formwizard th,  
+.formwizard td ,
+.sharedfiles th,  .sharedfiles td , .filemanager th , .filemanager td{ border:none; padding: 3px 0px 3px 0px!important;}
+.filemanager th img, .filemanager td img, .sharedfiles th img, .sharedfiles td  img { margin:0px 2px 0px 2px ; }
+
+table.aspcheckboxlist td, table.aspcheckboxlist th { border:none; }
+
